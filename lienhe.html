@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>THÔNG TIN LIÊN HỆ - THẾ GIỚI SKINFOOD</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo-removebg-preview.png">
+</head>
+<body>
+    <div class="kk">
+        <img src="images/anhdau.png">
+    </div>
+    <div class="header">
+        <div class="logo">
+            <img src="images/logo-removebg-preview.png">
+        </div>
+        <div class="menu">
+            <ul class="menu-items">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="chamsocda.html">Chăm sóc da</a></li>
+                <li><a href="banchay.html">Bán chạy</a></li>
+                <li><a href="TAPCHILAMDEP.html">Tạp chí làm đẹp</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div class="search-box">
+            <input type="text" id="search-text"placeholder="Flash sale chỉ từ 1K " />
+            <button id="search-btn"> <i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    <!-- them icon dang nhap va gio hang-->
+            <div class="icon">
+                <a href=""><i class="fa-solid fa-user"></i></a>
+                <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+                
+            </div>
+        </div>
+        <!-- chuyen anh slide -->
+        <div id="slide">
+            <img id="hinh" src ="images/1.jpg">
+            <div class="dieuhuong">
+                <i class="fa fa-chevron-circle-left" onclick="prev()"></i>
+                <i class="fa fa-chevron-circle-right" onclick="next()"></i>
+            </div>
+        </div>
+    
+        
+</body>
+</html>
+<!-- javascript phan slide -->
+<script>
+    var arr_hinh=[
+        "images/1.jpg",
+        "images/2.jpg",
+        "images/3.jpg",
+        "images/4.jpg",
+    ]
+    var index=0;
+    function next(){
+        index++;
+        if(index>=arr_hinh.length)index=1;
+    
+        var hinh=document.getElementById("hinh");
+        hinh.src=arr_hinh[index];
+    }
+    function prev(){
+        index--;
+        if(index<1) index= arr_hinh.length -1;
+    
+        var hinh=document.getElementById("hinh");
+        hinh.src=arr_hinh[index]; 
+    }
+    setInterval("next()", 2000);
+    </script>
